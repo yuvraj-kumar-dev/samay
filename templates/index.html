@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Hub - Your Time, Your Style</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1f1f1f;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .hero {
+            padding: 50px 20px;
+        }
+        .clock {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+            background: #1f1f1f;
+        }
+        .feature {
+            max-width: 300px;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            padding: 20px;
+            background: #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SAMAY</div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('features')}}">Features</a></li>
+                <li><a href="{{url_for('explore')}}">Explore</a></li>
+                <li><a href="{{url_for('contact')}}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="clock" id="clock"></div>
+        <h1>Precision Timekeeping, Stunning Design
+            
+        </h1>
+        <p>Experience time like never before with our unique digital and analog clock collections.</p>
+        <a href="{{url_for('explore')}}" class="btn">Explore Clocks</a>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="feature">
+            <h2>Real-Time Sync</h2>
+            <p>Our clocks are synced with global atomic time for ultimate accuracy.</p>
+        </div>
+        <div class="feature">
+            <h2>Check your time</h2>
+            <p style="color: #000 ; border-radius: 5px; background-color: #ffcc00">Your current time is: {{userTime}}.</p>
+        </div>
+        <div class="feature">
+            <h2>Multi-Platform</h2>
+            <p>Access your favorite clocks from web, mobile, and smart devices.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 SAMAY | Designed and Code with ❤️ by Yuvraj for timeless elegance.</p>
+    </footer>
+</body>
+</html>

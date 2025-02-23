@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - SAMAY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1f1f1f;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .features-page {
+            padding: 50px 20px;
+        }
+        .feature-detail {
+            background: #222;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .feature-detail h2 {
+            color: #ffcc00;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        footer {
+            padding: 20px;
+            background: #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SAMAY</div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="{{url_for('contact')}}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="features-page">
+        <h1>Explore SAMAY's Features</h1>
+        
+        <div class="feature-detail">
+            <h2>AI-Powered Timetable Generation</h2>
+            <p>Our advanced AI analyzes your routines and preferences to create a custom timetable that adapts to your needs.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Smart Alarms</h2>
+            <p>Set alarms that are intelligent enough to understand your schedule and remind you based on context and importance.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Stopwatch Mode</h2>
+            <p>Efficiently track your time with a precision stopwatch that provides lap times and exportable reports.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Time Zone Sync</h2>
+            <p>Sync your clocks across time zones to ensure you’re always on time, no matter where you are.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Futuristic Design</h2>
+            <p>Our sleek, modern interface and customizable themes bring a visually stunning experience that suits your style.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Global Atomic Time Sync</h2>
+            <p>Stay on the most accurate time with our synchronization to global atomic clocks.</p>
+        </div>
+
+        <a href="{{url_for('explore')}}" class="btn">Explore Clocks</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 SAMAY | Designed and Code with ❤️ by Yuvraj for timeless elegance.</p>
+    </footer>
+</body>
+</html>
