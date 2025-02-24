@@ -1,7 +1,28 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
 import time
 
 app = Flask(__name__)
+app.config ['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/samay'
+db = SQLAlchemy(app)
+
+class Contact(db.Model):
+    
+    email = db.Column(db.String(120), nullable=False)
+    phone = db.Column(db.String(12), nullable=False)
+    message = db.Column(db.String(120), nullable=False)
+
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        message = request.form.get('message')
+        entry = Contact(email=email, phone=phone, message=message)
+        db.session.add(entry)
+        db.session.commit()
+    return render_template('contact.html')
 
 
 @app.route('/')
