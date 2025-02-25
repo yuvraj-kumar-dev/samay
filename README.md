@@ -2,6 +2,8 @@
 
 Samay is a **Flask-based web application** designed to handle time-based functionalities. This repository includes the necessary templates, the core application logic, and dependency requirements.  
 
+Checkout my website : https://samay-wpxs.onrender.com
+
 🚀 Features  
 
 - 🖥️ **Web-based UI** built using Flask templates  
@@ -14,6 +16,7 @@ Samay is a **Flask-based web application** designed to handle time-based functio
 1️⃣ Clone the Repository  
 
 git clone https://github.com/yovraj-kumar-dev/samay.git
+
 cd samay
 
 2️⃣ Create a Virtual Environment (Optional but Recommended)
