@@ -18,6 +18,7 @@ class Contact(db.Model):
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    msg = ""
     if request.method == 'POST':
         email = request.form.get('email')
         phone = request.form.get('phone')
@@ -25,7 +26,8 @@ def contact():
         entry = Contact(email=email, phone=phone, message=message)
         db.session.add(entry)
         db.session.commit()
-    return render_template('contact.html')
+        msg = "Your message has been sent!"
+    return render_template('contact.html', msg=msg)
 
 
 @app.route('/')
