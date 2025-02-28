@@ -134,6 +134,11 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
 
+          {% if msg %}
+    <p style="color: green;">{{ msg }}</p>
+{% endif %}
+
+
         <a href="#explore" class="btn">Explore Clocks</a>
     </section>
     
