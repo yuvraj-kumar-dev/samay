@@ -73,6 +73,64 @@
             padding: 20px;
             background: #1f1f1f;
         }
+        @media (max-width: 1024px) {
+    .features {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .feature {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .hero {
+        padding: 30px 10px;
+    }
+    .clock {
+        font-size: 36px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px;
+    }
+    .feature {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    .clock {
+        font-size: 28px;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .feature {
+        padding: 15px;
+    }
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
