@@ -10,6 +10,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <style>
+        @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .features-page {
+        padding: 30px 10px;
+    }
+    .feature-detail {
+        padding: 15px;
+    }
+    .feature-detail h2 {
+        font-size: 18px;
+    }
+    .form-group input, .form-group label {
+        font-size: 16px;
+    }
+    .form-group input {
+        padding: 8px;
+    }
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    header {
+        padding: 15px;
+    }
+    .features-page {
+        padding: 20px;
+    }
+    .feature-detail h2 {
+        font-size: 16px;
+    }
+    .feature-detail p {
+        font-size: 14px;
+    }
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+    input, textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+    .btn {
+        width: 100%;
+    }
+    footer {
+        font-size: 12px;
+    }
+}
+
         body {
             font-family: 'Orbitron', sans-serif;
             margin: 0;
