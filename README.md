@@ -15,7 +15,7 @@ Checkout my website : https://samay-wpxs.onrender.com
 
 1️⃣ Clone the Repository  
 
-git clone https://github.com/yovraj-kumar-dev/samay.git
+git clone https://github.com/yuvraj-kumar-dev/samay.git
 
 cd samay
 
