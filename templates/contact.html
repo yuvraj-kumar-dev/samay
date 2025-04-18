@@ -1,4 +1,184 @@
 {% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - SAMAY</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .features-page {
+        padding: 30px 10px;
+    }
+    .feature-detail {
+        padding: 15px;
+    }
+    .feature-detail h2 {
+        font-size: 18px;
+    }
+    .form-group input, .form-group label {
+        font-size: 16px;
+    }
+    .form-group input {
+        padding: 8px;
+    }
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    header {
+        padding: 15px;
+    }
+    .features-page {
+        padding: 20px;
+    }
+    .feature-detail h2 {
+        font-size: 16px;
+    }
+    .feature-detail p {
+        font-size: 14px;
+    }
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+    input, textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+    .btn {
+        width: 100%;
+    }
+    footer {
+        font-size: 12px;
+    }
+}
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1f1f1f;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .features-page {
+            padding: 50px 20px;
+        }
+        .feature-detail {
+            background: #222;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .feature-detail h2 {
+            color: #ffcc00;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        footer {
+            padding: 20px;
+            background: #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SAMAY</div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('explore')}}">Explore</a></li>
+                <li><a href="{{url_for('contact')}}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <headline style="background-color: #ffcc00; border-radius: 15px; color: #000; font-size: xx-large; font-weight: 600;">CONTACT US</headline>
+    <section class="features-page">
+        <h1>Email: yuvrajkumar.dev@gmail.com</h1>
+        
+        <div class="feature-detail">
+            <h2>AI-Powered Timetable Generation</h2>
+            <p>Our advanced AI analyzes your routines and preferences to create a custom timetable that adapts to your needs.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Smart Alarms</h2>
+            <p>Set alarms that are intelligent enough to understand your schedule and remind you based on context and importance.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Stopwatch Mode</h2>
+            <p>Efficiently track your time with a precision stopwatch that provides lap times and exportable reports.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Time Zone Sync</h2>
+            <p>Sync your clocks across time zones to ensure you’re always on time, no matter where you are.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Futuristic Design</h2>
+            <p>Our sleek, modern interface and customizable themes bring a visually stunning experience that suits your style.</p>
+        </div>
+        
+        <div class="feature-detail">
+            <h2>Global Atomic Time Sync</h2>
+            <p>Stay on the most accurate time with our synchronization to global atomic clocks.</p>
+        </div>
+>>>>>>> 612944e8fc34ad21cc479938678c2327fcd96cde
 
 {% block body %}
 
