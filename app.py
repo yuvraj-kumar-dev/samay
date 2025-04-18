@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import time
 import pymysql
+import random
 pymysql.install_as_MySQLdb()
 
 
@@ -23,9 +24,8 @@ def contact():
         email = request.form.get('email')
         phone = request.form.get('phone')
         message = request.form.get('message')
-        entry = Contact(email=email, phone=phone, message=message)
-        db.session.add(entry)
-        db.session.commit()
+        with open("contacts.txt", "a") as contacts:
+            contacts.write(f"{email} {phone} {message} \n")
         msg = "Your message has been sent!"
     return render_template('contact.html', msg=msg)
 
@@ -43,7 +43,7 @@ def about():
 def features():
     return render_template('features.html')
 
-@app.route('/contact_page')
+@app.route('/contact_page',)
 def contact_page():
     return render_template('contact.html')
 
