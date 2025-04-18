@@ -21,16 +21,16 @@ cd samay
 
 2️⃣ Create a Virtual Environment (Optional but Recommended)
 
-python -m venv venv  
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+python -m venv env  
+source env/bin/activate  # On Windows: `.\env\Scripts\activate`
 
 3️⃣ Install Dependencies
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 4️⃣ Run the Flask App
 
-python app.py
+`python app.py`
 
 The application should be running at http://127.0.0.1:5000/.
 
